@@ -70,7 +70,7 @@ async function pokemonModal(id) {
     dialog.innerHTML = "";
 
     dialog.innerHTML = `<button type="button" class="btnBack" onclick="closeModal()">
-            x
+             &#129044;
             </button>
             <div>
             <span class="number">#${pokemonData.id}</span>

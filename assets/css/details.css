@@ -22,11 +22,12 @@ dialog img {
 }
 
 button.btnBack {
+  font-size: 1.3rem;
   border: none;
   margin: 1rem;
   border-radius: 1rem;
   padding: 0 0.5rem;
-  background-color: #6c79db;
+  background-color: transparent;
   color: #fff;
   margin-bottom: 1rem;
 }
