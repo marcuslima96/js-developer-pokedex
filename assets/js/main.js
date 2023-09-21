@@ -76,7 +76,6 @@ async function pokemonModal(id) {
             <span class="number">#${pokemonData.id}</span>
             <span class="name">${pokemonData.name}</span>
             </div>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonData.id}.png" alt="${pokemonData.name}">
            `;
 
     const types = pokemonData.types.map((type) => type.type.name);
@@ -92,20 +91,26 @@ async function pokemonModal(id) {
       typesList = `<p class="type">Tipo(s): Desconhecido</p>`;
     }
 
+    dialog.classList.add(`${types[0]}`);
+    console.log(dialog);
+
     dialog.innerHTML += typesList;
+
     const abilities = pokemonData.abilities
       .map((ability) => ability.ability.name)
       .join(" | ");
 
     dialog.innerHTML += `
+    <div class="img">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
+      pokemonData.id
+    }.png" alt="${pokemonData.name}"> </div>
       <div class="info">
         <h3>Weight</h3><p class="weight">${pokemonData.weight / 10} kg</p>
         <h3>Height</h3><p class="height">${pokemonData.height / 10} m</p>
         <h3>Abilities</h3><p class="abilities">${abilities}</p>
       </div>
     `;
-
-    console.log(pokemonData);
   } catch (error) {
     console.error(error);
   }
@@ -114,6 +119,7 @@ async function pokemonModal(id) {
 function closeModal() {
   const dialog = document.getElementById("dialog");
   dialog.close();
+  dialog.classList.remove(...dialog.classList);
 }
 
 pokemonList.addEventListener("click", (event) => {
@@ -121,7 +127,6 @@ pokemonList.addEventListener("click", (event) => {
   if (target.classList.contains("name")) {
     dialog.showModal();
   }
-  console.log(dialog);
 });
 
 dialog.addEventListener("click", (e) => {
