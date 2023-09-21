@@ -57,7 +57,7 @@ dialog span.name {
 dialog img {
   display: block;
   max-width: 100%;
-  margin: 2rem auto;
+  margin: 0 auto;
 }
 
 dialog ol {
@@ -110,5 +110,5 @@ dialog p.abilities {
 }
 
 dialog h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }

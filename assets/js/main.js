@@ -30,15 +30,6 @@ function convertPokemonToLi(pokemon) {
         </li>
     `;
 }
-// async function pokemonModal(id) {
-//   let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(
-//     (response) => response.json()
-//   );
-//   const dialog = document.getElementById("dialog");
-//   dialog.innerHTML = response.name;
-
-//   console.log(response);
-// }
 
 function loadPokemonItens(offset, limit) {
   pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -104,7 +95,7 @@ async function pokemonModal(id) {
     dialog.innerHTML += typesList;
     const abilities = pokemonData.abilities
       .map((ability) => ability.ability.name)
-      .join(" ");
+      .join(" | ");
 
     dialog.innerHTML += `
       <div class="info">
