@@ -63,9 +63,9 @@ async function pokemonModal(id) {
     if (!response.ok) {
       throw new Error("Não foi possível buscar os dados do Pokémon.");
     }
-
     let pokemonData = await response.json();
     const dialog = document.getElementById("dialog");
+    console.log(pokemonData);
 
     dialog.innerHTML = "";
 
@@ -92,7 +92,6 @@ async function pokemonModal(id) {
     }
 
     dialog.classList.add(`${types[0]}`);
-    console.log(dialog);
 
     dialog.innerHTML += typesList;
 
@@ -111,6 +110,16 @@ async function pokemonModal(id) {
         <h3>Abilities</h3><p class="abilities">${abilities}</p>
       </div>
     `;
+
+    // if (pokemonData.stats.length > 0) {
+    //   pokemonData.stats.forEach((stat) => {
+    //     const statName = stat.stat.name;
+    //     const statBase = stat.base_stat;
+    //     dialog.innerHTML += `<ul> <li>${statName}: ${statBase}</li> </ul> `;
+    //   });
+    // } else {
+    //   dialog.innerHTML += "<p class='stats'>Stats Base: Desconhecido</p>";
+    // }
   } catch (error) {
     console.error(error);
   }
