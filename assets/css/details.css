@@ -5,14 +5,10 @@ dialog::backdrop {
 dialog {
   margin: 5rem auto;
   padding: 0;
-  width: 350px;
+  width: 400px;
   border: none;
   border-radius: 1rem;
   box-shadow: rgb(0, 0, 0 /0.5);
-}
-
-dialog img {
-  width: 200px;
 }
 
 .dialogHeader {
@@ -49,7 +45,7 @@ dialog span.number {
 }
 
 dialog span.name {
-  margin-left: 2rem;
+  margin: 0 0 3rem 2rem;
   color: #fff;
   text-transform: capitalize;
   font-size: 2rem;
@@ -65,7 +61,7 @@ dialog div.img {
 
 dialog img {
   display: block;
-  width: 160px;
+  width: 180px;
   max-width: 100%;
   margin: -30px auto;
 }
@@ -82,7 +78,7 @@ dialog ol {
 dialog li {
   list-style: none;
   color: #fff;
-  /* text-shadow: #000 0.1em 0.1em 0.1em; */
+  text-shadow: #000 0.1em 0.1em 0.1em;
   background-color: #c7c7c7;
   padding: 0.1rem 0.5rem;
   margin: 0.25rem 0;
@@ -122,4 +118,10 @@ dialog p.abilities {
 
 dialog h3 {
   font-size: 1rem;
+}
+
+ul.stats {
+  margin-right: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }

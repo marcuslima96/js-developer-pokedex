@@ -7,6 +7,10 @@ body {
   background-color: #f6f8fc;
 }
 
+h1 {
+  margin: 1rem 1rem;
+}
+
 html,
 body {
   margin: 0;
